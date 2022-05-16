@@ -7,7 +7,6 @@ test('basic test', async () => {
   await page.fill("#user-password", "Test123123")
   await page.click("#sign-in")
   await expect(page.locator('#sign-in')).toHaveText('Sign in with email')
-  // await page.waitForTimeout(5000)
   await page.screenshot({path : `test.png`})
   await browser.close()
 });
